@@ -31,16 +31,43 @@
     a:hover {
       background: #357abd;
     }
+
+    /* Анимации */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .slide-in {
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: slideIn 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
+  <header class="slide-in">
     <h1>Обо мне</h1>
   </header>
-  <main>
+  <main class="fade-in">
     <p>Меня зовут Рысбаев Адильжан Заурович. Я родился 29 сентября 2010 года в Карабулаке.</p>
-    <p>Мне 14 лет. Я обожаю свою младшую сестрёнку (9 лет) и малышку (2.5 года).</p>
-    <p>Моё имя дал мне прадедушка. Оно значит «справедливая душа» — и я стараюсь соответствовать.</p>
+    <p>Мне 14 лет. Я обожаю свою младшую сестрёнку и малышку.</p>
+    <p>Моё имя значит «справедливая душа» — и я стараюсь быть таким.</p>
     <a href="index.html">← Назад</a>
   </main>
 </body>
