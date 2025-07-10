@@ -34,14 +34,41 @@
     button:hover {
       background: #357abd;
     }
+
+    /* Анимации */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .slide-in {
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: slideIn 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
+  <header class="slide-in">
     <h1>Привет! Я Адильжан</h1>
     <p>Мой сайт создан с помощью ChatGPT</p>
   </header>
-  <main>
+  <main class="fade-in">
     <button onclick="location.href='about.html'">Обо мне</button>
     <button onclick="location.href='tech.html'">Моя техника</button>
     <button onclick="location.href='videos.html'">Мои видео</button>
