@@ -19,6 +19,14 @@
     main {
       padding: 2rem;
     }
+    .video-block {
+      background: white;
+      margin: 1rem auto;
+      padding: 1rem;
+      border-radius: 10px;
+      max-width: 600px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
     a {
       display: inline-block;
       margin-top: 2rem;
@@ -31,15 +39,38 @@
     a:hover {
       background: #357abd;
     }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+    .slide-in {
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: slideIn 0.8s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
+  <header class="slide-in">
     <h1>Мои видео</h1>
   </header>
-  <main>
-    <p>Я создаю грустные, но добрые истории для детей в формате YouTube Shorts с помощью ChatGPT.</p>
-    <p>Скоро здесь появятся мои лучшие ролики!</p>
+  <main class="fade-in">
+    <div class="video-block">
+      <p>Скоро здесь появятся мои YouTube Shorts!</p>
+    </div>
     <a href="index.html">← Назад</a>
   </main>
 </body>
